@@ -56,8 +56,18 @@
                             </div>
                         </form> 
 
-                        </div>
-                       
+                         <?php
+
+                         if(isset($_GET['edit'])) {
+
+                            $cat_id = $_GET['edit'];
+
+                            include "includes/update_categories.php";
+
+                         }
+
+                         ?>
+                         </div>
                         <!-- Add Category Form -->
                         <div class="col-xs-6">
 
@@ -86,6 +96,7 @@
                                     echo "<td>{$cat_id}</td>";
                                     echo "<td>{$cat_title}</td>";
                                     echo "<td><a href='categories.php?delete={$cat_id}'>Delete</a></td>";
+                                    echo "<td><a href='categories.php?edit={$cat_id}'>Edit</a></td>";
                                     echo "</tr>";
 
                                 }
@@ -102,10 +113,7 @@
                                 header("Location: categories.php");
 
                                 }
-                                
-                                
-                                
-                                
+                                                        
                                     ?>
 
                                 <tr>
