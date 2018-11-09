@@ -30,7 +30,7 @@
                         ?>
 
 
-                        <form action="">
+                        <form action="" method="post">
                             <div class="form-group">
                                 <label for="cat-title">Add Categody</label>
                                 <input type="text" class="form-control" name="cat_title" id="">
